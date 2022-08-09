@@ -1,0 +1,52 @@
+/*
+Theme Name: Truelove
+Text Domain: Truelove
+Version: 1.0
+Description: ddd
+
+Author: Federico Sardo
+Author URI: https://wolkemann.net
+
+
+
+*/
+
+:root {
+  --title-text-color: white;
+  --title-text-shadow-color: #f6c9f1;
+  --post-text-color: #6926a9;
+  --post-border-color: #584dc0;
+  --post-background-color: #b4e0fa;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f6c9f1;
+  color: var(--post-text-color);
+}
+
+@media only screen and (min-width: 850px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+.posts-wrapper,
+.sidebar-wrapper,
+.footer-wrapper {
+  padding: 0.5rem;
+}
+
+@media only screen and (min-width: 850px) {
+  .posts-wrapper,
+  .sidebar-wrapper,
+  .footer-wrapper {
+    padding: 2rem;
+  }
+}

@@ -1,0 +1,31 @@
+.blog-header {
+  height: 290px;
+  padding: 3rem;
+  background-image: linear-gradient(
+      to top,
+      rgba(0 0 0 / 10%),
+      rgba(0 0 0 / 20%)
+    ),
+    url("../images/blog-header.png");
+  background-position: 750px -270px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media only screen and (min-width: 850px) {
+  .blog-header {
+    background-position: center -320px;
+  }
+}
+
+h1,
+h1 a {
+  text-decoration: none;
+
+  color: var(--title-text-color);
+  text-shadow: 2px 2px 0px var(--title-text-shadow-color);
+}
+
+h1 {
+  font-size: 3em;
+}

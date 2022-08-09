@@ -1,0 +1,16 @@
+.singlepost {
+  padding: 1rem;
+}
+
+@media only screen and (min-width: 850px) {
+  .singlepost {
+    width: 850px;
+  }
+}
+
+.singlepost-featured-image {
+  width: 100%;
+  border: 2px solid var(--post-border-color);
+  display: block;
+  margin: 1rem 0;
+}

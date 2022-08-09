@@ -1,0 +1,35 @@
+.lastposts-per-category-wrapper ul {
+  list-style: none;
+}
+
+.lastposts-per-category-wrapper ul a {
+  text-decoration: none;
+}
+
+.lastposts-per-category-wrapper li {
+  background-color: var(--post-background-color);
+  border: 2px solid var(--post-border-color);
+  margin: 0.5rem 0;
+  padding: 0.3rem;
+  border-radius: 3px;
+  box-shadow: rgb(78 10 71 / 57%) 5px 3px 2px 1px;
+}
+
+@media only screen and (min-width: 850px) {
+  .lastposts-per-category-wrapper li {
+    width: 350px;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .lastposts-per-category-wrapper {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.lastsposts-per-category-category-name {
+  font-size: 2em;
+  color: var(--post-text-color);
+  font-weight: bold;
+}
