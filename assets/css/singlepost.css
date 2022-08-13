@@ -1,5 +1,6 @@
 .singlepost {
   padding: 1rem;
+  margin-top: -220px;
 }
 
 @media only screen and (min-width: 850px) {

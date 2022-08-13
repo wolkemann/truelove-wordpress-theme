@@ -1,7 +1,7 @@
 .footer-wrapper {
   background-color: var(--post-background-color);
-  border: 2px solid var(--post-border-color);
-  border-width: 2px 0px 0px 0px;
+
+  box-shadow: rgb(78 10 71 / 57%) 0px -1px 2px 1px;
 }
 
 .footer-widgets-container {

@@ -12,7 +12,7 @@ add_action('after_setup_theme', 'truelove_theme_support');
 
 function truelove_sidebar() {
     $locations = array(
-        "primary" => "Main Sidebar",
+        "primary" => "Main Menu",
     );
 
     register_sidebar(array(
@@ -50,9 +50,12 @@ add_action('wp_enqueue_scripts', 'truelove_register_styles');
 
 
 function truelove_register_scripts() {
-
-  //  wp_enqueue_script('truelove-style', get_template_directory_uri(). "/style.css", array(), $version, true);
-  wp_enqueue_script('truelove-iconify', "https://code.iconify.design/2/2.2.1/iconify.min.js", array(), "2.2.1", true);
+    
+    $version = wp_get_theme()->get('Version');
+    
+    wp_enqueue_script('truelove-jquery', "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js", array(), "3.6.0", true);
+    wp_enqueue_script('truelove-script', get_template_directory_uri(). "/assets/js/script.js", array(), $version, true);
+    wp_enqueue_script('truelove-iconify', "https://code.iconify.design/2/2.2.1/iconify.min.js", array(), "2.2.1", true);
   
 }
 
