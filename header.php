@@ -8,18 +8,7 @@
 </head>
 <body>
 <?php get_template_part('template-parts/section', 'menu'); ?>
+<span class="iconify open-menu-button" id="open-menu-button" data-icon="gg:menu-boxed"></span>
 <header class="blog-header">
     <h1><a href="<?php echo get_site_url() ?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
 </header>
-
-<?php  /*
-    wp_nav_menu(
-        array(
-            "menu" => "primary",
-            "container" => "",
-            "theme_location" => "primary",
-            "items_wrap" => "<ul>%3$s</ul>"
-        )
-    );
-*/
-?>

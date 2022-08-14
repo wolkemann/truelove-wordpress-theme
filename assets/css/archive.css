@@ -1,0 +1,29 @@
+.archive-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  min-height: auto;
+  gap: 2rem;
+}
+@media only screen and (min-width: 850px) {
+  .archive-wrapper {
+    width: 850px;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .archive-post {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+  }
+}
+
+.archive-featured-image {
+  width: 100%;
+}
+
+@media only screen and (min-width: 850px) {
+  .archive-featured-image {
+    width: 290px;
+  }
+}

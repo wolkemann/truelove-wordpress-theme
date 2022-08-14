@@ -12,6 +12,7 @@ Author URI: https://wolkemann.net
 */
 
 :root {
+  --background-color: #f6c9f1;
   --title-text-color: white;
   --title-text-shadow-color: #f6c9f1;
   --post-text-color: #6926a9;
@@ -49,4 +50,26 @@ body {
   .footer-wrapper {
     padding: 2rem;
   }
+}
+
+.icon-shadow {
+  text-shadow: 2px 2px 0px var(--post-border-color);
+}
+
+textarea,
+input {
+  font-family: "Roboto", sans-serif;
+} /*
+
+Text tag and formatting, like for example the <code> tag
+
+
+*/
+
+.wp-block-code {
+  font-size: 0.8em;
+  margin: 1rem;
+  padding: 1rem;
+  color: gray;
+  background-color: white;
 }

@@ -9,10 +9,12 @@ function truelove_theme_support() {
 
 add_action('after_setup_theme', 'truelove_theme_support');
 
+require get_template_directory() . '/template-parts/comments-helper.php';
+
 
 function truelove_sidebar() {
     $locations = array(
-        "primary" => "Main Sidebar",
+        "primary" => "Main Menu",
     );
 
     register_sidebar(array(
@@ -41,7 +43,9 @@ function truelove_register_styles() {
     wp_enqueue_style('truelove-post', get_template_directory_uri(). "/assets/css/post.css", array(), $version);
     wp_enqueue_style('truelove-sidebar', get_template_directory_uri(). "/assets/css/sidebar.css", array(), $version);
     wp_enqueue_style('truelove-footer', get_template_directory_uri(). "/assets/css/footer.css", array(), $version);
+    wp_enqueue_style('truelove-archive', get_template_directory_uri(). "/assets/css/archive.css", array(), $version);
     wp_enqueue_style('truelove-singlepost', get_template_directory_uri(). "/assets/css/singlepost.css", array(), $version);
+    wp_enqueue_style('truelove-comments', get_template_directory_uri(). "/assets/css/comments.css", array(), $version);
     wp_enqueue_style('truelove-fonts', 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 }
 
@@ -50,9 +54,12 @@ add_action('wp_enqueue_scripts', 'truelove_register_styles');
 
 
 function truelove_register_scripts() {
-
-  //  wp_enqueue_script('truelove-style', get_template_directory_uri(). "/style.css", array(), $version, true);
-  wp_enqueue_script('truelove-iconify', "https://code.iconify.design/2/2.2.1/iconify.min.js", array(), "2.2.1", true);
+    
+    $version = wp_get_theme()->get('Version');
+    
+    wp_enqueue_script('truelove-jquery', "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js", array(), "3.6.0", true);
+    wp_enqueue_script('truelove-script', get_template_directory_uri(). "/assets/js/script.js", array(), $version, true);
+    wp_enqueue_script('truelove-iconify', "https://code.iconify.design/2/2.2.1/iconify.min.js", array(), "2.2.1", true);
   
 }
 

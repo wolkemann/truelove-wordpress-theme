@@ -1,5 +1,11 @@
+.singlepost-wrapper {
+  flex-flow: column wrap;
+}
+
 .singlepost {
+  align-self: center;
   padding: 1rem;
+  margin-top: -230px;
 }
 
 @media only screen and (min-width: 850px) {
@@ -12,5 +18,22 @@
   width: 100%;
   border: 2px solid var(--post-border-color);
   display: block;
+  margin: 1rem 0;
+}
+
+.singlepost h1 {
+  font-size: 2em;
+  color: var(--post-text-color);
+  text-shadow: none;
+}
+
+.singlepost p {
+  margin: 1rem 0;
+}
+
+.singlepost-content h1,
+h2,
+h3,
+h4 {
   margin: 1rem 0;
 }
