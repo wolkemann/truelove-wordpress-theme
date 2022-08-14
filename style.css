@@ -55,3 +55,21 @@ body {
 .icon-shadow {
   text-shadow: 2px 2px 0px var(--post-border-color);
 }
+
+textarea,
+input {
+  font-family: "Roboto", sans-serif;
+} /*
+
+Text tag and formatting, like for example the <code> tag
+
+
+*/
+
+.wp-block-code {
+  font-size: 0.8em;
+  margin: 1rem;
+  padding: 1rem;
+  color: gray;
+  background-color: white;
+}

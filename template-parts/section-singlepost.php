@@ -1,5 +1,5 @@
 <article class="post singlepost">
-    <p>
+    
         <?php echo get_the_date(); ?>
         <span class="iconify" data-icon="dashicons:category"></span>
         <?php 	
@@ -10,8 +10,8 @@
             </a>
             <?php endforeach;
         ?>
-    </p>
-    <h2><?php the_title(); ?></h2>
+   
+    <h1><?php the_title(); ?></h1>
     <?php if(has_post_thumbnail()): ?>
     <img class="singlepost-featured-image"
     src="<?php echo the_post_thumbnail_url('thumbnail'); ?>" alt="featured image">
@@ -19,3 +19,12 @@
 
     <?php  the_content(); ?>
 </article>
+
+<section class="comments-section">
+    <h2>
+        <span class="iconify" data-icon="prime:comments"></span> <?php echo get_comments_number() ?> Comments
+    </h2>
+    <article class="comments-wrapper">
+        <?php comments_template(); ?>
+    </article>
+</section>

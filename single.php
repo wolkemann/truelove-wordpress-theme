@@ -3,7 +3,7 @@
 
 <?php if(have_posts()): ?>
 
-    <section class="posts-wrapper">
+    <section class="posts-wrapper singlepost-wrapper">
 
         <?php while(have_posts()): the_post(); ?>
 
