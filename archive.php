@@ -2,17 +2,18 @@
 
 <?php if(have_posts()): ?>
 
-    <section class="posts-wrapper">
-<article class="post post-featured-image archive-wrapper">
-        <?php while(have_posts()): the_post(); ?>
+    <section class="posts-wrapper archive-wrapper">
+        <h1><?php the_category( ' ' ); ?></h1>
+        <article class="post archive-container">
+            <?php while(have_posts()): the_post(); ?>
 
-        
+                
 
-        <?php get_template_part('template-parts/section', 'archive'); ?>
+            <?php get_template_part('template-parts/section', 'archive'); ?>
 
-        <?php endwhile; ?>
+            <?php endwhile; ?>
 
-</article>
+        </article>
 </section>
 
     <section>

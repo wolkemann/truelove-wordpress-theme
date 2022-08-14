@@ -1,11 +1,19 @@
 .archive-wrapper {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
+  align-content: center;
+  margin-top: -140px;
+}
+
+.archive-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
   min-height: auto;
   gap: 2rem;
 }
 @media only screen and (min-width: 850px) {
-  .archive-wrapper {
+  .archive-container {
     width: 850px;
   }
 }

@@ -7,7 +7,7 @@
       rgba(0 0 0 / 20%)
     ),
     url("../images/blog-header.png");
-  background-position: 750px -270px;
+  background-position: 750px -320px;
   background-size: cover;
   background-attachment: fixed;
   box-shadow: rgb(78 10 71 / 57%) 0px 2px 2px 1px;
@@ -15,7 +15,7 @@
 
 @media only screen and (min-width: 850px) {
   .blog-header {
-    background-position: center -320px;
+    background-position: center -350px;
   }
 }
 

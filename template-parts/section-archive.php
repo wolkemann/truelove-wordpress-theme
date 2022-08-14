@@ -1,5 +1,4 @@
 <section class="archive-post">
-
 <?php if(has_post_thumbnail()): ?>
     <div>
     <img class="archive-featured-image"
