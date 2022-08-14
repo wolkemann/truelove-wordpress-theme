@@ -23,6 +23,7 @@
 
 </article>
 
+<?php if(comments_open()): ?>
 <section class="comments-section">
     <div class="comments-number">
         <span class="iconify" data-icon="prime:comments"></span> <?php echo get_comments_number() ?> Comments
@@ -31,3 +32,4 @@
         <?php comments_template(); ?>
     </article>
 </section>
+<?php endif; ?>
