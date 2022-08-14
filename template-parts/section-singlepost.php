@@ -1,6 +1,6 @@
 <article class="post singlepost">
     
-        <?php echo get_the_date(); ?>
+    <?php echo get_the_date(); ?>
         <span class="iconify" data-icon="dashicons:category"></span>
         <?php 	
             $categories = get_the_category();
@@ -9,7 +9,7 @@
             <i class="post-category-label"><?php echo $cat->name; ?></i>
             </a>
             <?php endforeach;
-        ?>
+     ?>
    
     <h1><?php the_title(); ?></h1>
     <?php if(has_post_thumbnail()): ?>
@@ -17,13 +17,16 @@
     src="<?php echo the_post_thumbnail_url('thumbnail'); ?>" alt="featured image">
     <?php endif; ?>
 
+    <div class="singlepost-content">
     <?php  the_content(); ?>
+    </div>
+
 </article>
 
 <section class="comments-section">
-    <h2>
+    <div class="comments-number">
         <span class="iconify" data-icon="prime:comments"></span> <?php echo get_comments_number() ?> Comments
-    </h2>
+    </div>
     <article class="comments-wrapper">
         <?php comments_template(); ?>
     </article>

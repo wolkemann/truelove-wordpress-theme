@@ -43,8 +43,9 @@ function truelove_register_styles() {
     wp_enqueue_style('truelove-post', get_template_directory_uri(). "/assets/css/post.css", array(), $version);
     wp_enqueue_style('truelove-sidebar', get_template_directory_uri(). "/assets/css/sidebar.css", array(), $version);
     wp_enqueue_style('truelove-footer', get_template_directory_uri(). "/assets/css/footer.css", array(), $version);
+    wp_enqueue_style('truelove-archive', get_template_directory_uri(). "/assets/css/archive.css", array(), $version);
     wp_enqueue_style('truelove-singlepost', get_template_directory_uri(). "/assets/css/singlepost.css", array(), $version);
-     wp_enqueue_style('truelove-comments', get_template_directory_uri(). "/assets/css/comments.css", array(), $version);
+    wp_enqueue_style('truelove-comments', get_template_directory_uri(). "/assets/css/comments.css", array(), $version);
     wp_enqueue_style('truelove-fonts', 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 }
 
