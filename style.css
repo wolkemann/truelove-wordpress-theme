@@ -39,14 +39,12 @@ body {
 }
 
 .posts-wrapper,
-.sidebar-wrapper,
 .footer-wrapper {
   padding: 0.5rem;
 }
 
 @media only screen and (min-width: 850px) {
   .posts-wrapper,
-  .sidebar-wrapper,
   .footer-wrapper {
     padding: 1rem;
   }
@@ -59,17 +57,52 @@ body {
 textarea,
 input {
   font-family: "Roboto", sans-serif;
-} /*
+}
 
-Text tag and formatting, like for example the <code> tag
+/*
 
+WORDPRESS INJECTED CLASS CSS
 
 */
 
+/* Text tag and formatting, like for example the <code> tag */
 .wp-block-code {
   font-size: 0.8em;
   margin: 1rem;
   padding: 1rem;
   color: gray;
   background-color: white;
+}
+
+/* Widget category list CSS */
+.wp-block-categories-list {
+  list-style-type: none;
+}
+
+.wp-block-latest-posts {
+  text-decoration: none;
+}
+
+.wp-block-latest-posts__list,
+.wp-block-categories-list,
+.wp-block-rss {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.5rem;
+}
+
+.wp-block-latest-posts__list li,
+.wp-block-categories-list li,
+.wp-block-rss li {
+  padding: 0.5rem;
+  background-color: var(--post-border-color);
+}
+
+.wp-block-latest-posts__list li a,
+.wp-block-categories-list li a,
+.wp-block-rss li a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: var(--post-background-color);
 }

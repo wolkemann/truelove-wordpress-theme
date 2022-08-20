@@ -18,7 +18,18 @@ function truelove_sidebar() {
     );
 
     register_sidebar(array(
-			'name' => 'Footer widgets', 'id' => 'footer-sidebar',
+			'name' => 'Sidebar widgets', 'id' => 'sidebar-widgets',
+			'before_title' => '<h2 class="sidebar-widget-title">',
+			'after_title' => '</h2>',
+			'before_sidebar' => '<div class="sidebar-widgets-container">',
+			'after_sidebar' => '</div>',
+			'before_widget' => '<div class="sidebar-widget">',
+			'after_widget' => '</div>'
+	    )
+    );
+
+    register_sidebar(array(
+			'name' => 'Footer widgets', 'id' => 'footer-widgets',
 			'before_title' => '<h2>',
 			'after_title' => '</h2>',
 			'before_sidebar' => '<div class="footer-widgets-container">',
