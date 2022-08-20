@@ -2,7 +2,15 @@
   display: flex;
   flex-flow: column wrap;
   align-content: center;
-  margin-top: -140px;
+}
+
+.archive-title {
+  font-size: 2em;
+  background-color: var(--post-border-color);
+  padding: 0.5rem;
+  border-radius: 3px;
+  box-shadow: rgb(78 10 71 / 57%) 5px 3px 2px 1px;
+  text-shadow: none;
 }
 
 .archive-container {

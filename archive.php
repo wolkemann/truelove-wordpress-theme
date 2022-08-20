@@ -3,7 +3,7 @@
 <?php if(have_posts()): ?>
 
     <section class="posts-wrapper archive-wrapper">
-        <h1><?php the_category( ' ' ); ?></h1>
+        <h1 class="archive-title"><?php the_category( ' ' ); ?></h1>
         <article class="post archive-container">
             <?php while(have_posts()): the_post(); ?>
 

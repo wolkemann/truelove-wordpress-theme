@@ -1,5 +1,5 @@
 <section class="sidebar-wrapper">
-    <div class="lastposts-per-category-wrapper">
+   <!-- <div class="lastposts-per-category-wrapper">
         <?php 
         $categories = get_categories( array(
             'orderby' => 'name',
@@ -32,6 +32,6 @@
 
             <?php endif; ?>
         <?php endforeach; ?>
-    </div>
+    </div> -->
 
 </section>
