@@ -12,11 +12,10 @@
 
     </section>
 
-    <section>
 
-        <?php get_template_part('template-parts/section', 'sidebar'); ?>
+    <?php get_template_part('template-parts/section', 'sidebar'); ?>
 
-    </section>
+
 
 
 <?php endif; ?>

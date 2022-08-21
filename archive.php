@@ -16,11 +16,9 @@
         </article>
 </section>
 
-    <section>
 
-        <?php get_template_part('template-parts/section', 'lastposts'); ?>
 
-    </section>
+    <?php get_template_part('template-parts/section', 'sidebar'); ?>
 
 
 <?php endif; ?>

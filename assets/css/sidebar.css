@@ -1,3 +1,55 @@
+.sidebar-header {
+  height: 250px;
+  padding: 3rem;
+  background-image: linear-gradient(
+      to top,
+      rgba(0 0 0 / 10%),
+      rgba(0 0 0 / 20%)
+    ),
+    url("../images/blog-sidebar.png");
+  background-size: cover;
+  background-attachment: fixed;
+  box-shadow: rgb(78 10 71 / 57%) 0px 0px 2px 2px;
+}
+
+.sidebar-wrapper {
+  margin: 0.5rem;
+  margin-top: -120px;
+}
+
+@media only screen and (min-width: 850px) {
+  .sidebar-wrapper {
+    margin: 1rem;
+    margin-top: -140px;
+  }
+}
+
+.sidebar-widgets-container {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+}
+
+@media only screen and (min-width: 850px) {
+  .sidebar-widgets-container {
+    flex-flow: row wrap;
+    gap: 2rem;
+  }
+}
+
+.sidebar-widget-title {
+  margin-top: 0;
+}
+
+.sidebar-widget {
+  flex-grow: 1;
+  background-color: var(--post-background-color);
+  border: 2px solid var(--post-border-color);
+  padding: 1rem;
+  border-radius: 3px;
+  box-shadow: rgb(78 10 71 / 57%) 5px 3px 2px 1px;
+}
+
 .lastposts-per-category-wrapper ul {
   list-style: none;
 }
