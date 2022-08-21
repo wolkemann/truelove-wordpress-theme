@@ -2,7 +2,7 @@
 <?php if(has_post_thumbnail()): ?>
     <div>
     <img class="archive-featured-image"
-    src="<?php echo the_post_thumbnail_url('thumbnail'); ?>" alt="featured image">
+    src="<?php echo the_post_thumbnail_url('large'); ?>" alt="featured image">
     </div>
  <?php endif; ?>
 

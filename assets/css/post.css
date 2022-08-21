@@ -57,7 +57,7 @@
 
 @media only screen and (min-width: 850px) {
   .posts-wrapper {
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-flow: row wrap;
     margin-top: -60px;
   }

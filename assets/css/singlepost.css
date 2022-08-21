@@ -3,7 +3,7 @@
 }
 
 .singlepost {
-  align-self: center;
+  width: 100%;
   padding: 1rem;
   margin-top: -230px;
 }
@@ -11,14 +11,18 @@
 @media only screen and (min-width: 850px) {
   .singlepost {
     width: 850px;
+    align-self: center;
   }
+}
+
+.singlepost-shareicons-container {
+  margin: 0.5rem 0;
 }
 
 .singlepost-featured-image {
   width: 100%;
   border: 2px solid var(--post-border-color);
   display: block;
-  margin: 1rem 0;
 }
 
 .singlepost h1 {

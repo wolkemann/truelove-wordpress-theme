@@ -5,9 +5,6 @@ Version: 1.0
 Description: Truelove WP THEME.
 
 Author: Federico Sardo
-Author URI: https://wolkemann.net
-
-
 
 */
 
@@ -74,7 +71,11 @@ WORDPRESS INJECTED CLASS CSS
   background-color: white;
 }
 
-/* Widget category list CSS */
+/* 
+
+Widget CSS 
+
+*/
 .wp-block-latest-posts__list,
 .wp-block-categories-list,
 .wp-block-archives-list,
@@ -102,4 +103,9 @@ WORDPRESS INJECTED CLASS CSS
   width: 100%;
   text-decoration: none;
   color: var(--post-background-color);
+}
+
+.wp-block-latest-posts__post-author,
+.wp-block-latest-posts__post-date {
+  color: var(--background-color);
 }
