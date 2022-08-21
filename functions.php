@@ -85,16 +85,40 @@ function truelove_customize_register($wp_customize){
         'priority' => 120,
     ));
 
+    /**
+     * 
+     *  Author's Theme option
+     * 
+     */
     $wp_customize->add_setting('truelove_custom_options[disclaimer_enabled]', array(
         'capability' => 'edit_theme_options',
         'type'       => 'theme_mod',
 		'sanitize_callback' => 'esc_attr',
     ));
   
-    $wp_customize->add_control('truelove_custom_options_control', array(
+    $wp_customize->add_control('truelove_custom_options_author_disclaimer', array(
         'settings' => 'truelove_custom_options[disclaimer_enabled]',
         'label'    => __('Disclaimer enabled', 'truelove'),
-        'description'    => 'davai',
+        'description'    =>  __('Enable this option to show the creator of this theme, maybe it will help him in some way!', 'truelove'),
+        'section'  => 'truelove_custom_options',
+        'type'     => 'checkbox',
+    ));
+
+    /**
+     * 
+     *  Social share icon option
+     * 
+     */
+    $wp_customize->add_setting('truelove_custom_options[social_share]', array(
+        'capability' => 'edit_theme_options',
+        'type'       => 'theme_mod',
+		'sanitize_callback' => 'esc_attr',
+    ));
+
+    $wp_customize->add_control('truelove_custom_options_social_icons', array(
+        'settings' => 'truelove_custom_options[social_share]',
+        'label'    => __('Social sharing enabled', 'truelove'),
+        'description'    =>  __('Enable this option to show the sharing link icons for some social medias in your single posts.', 'truelove'),
         'section'  => 'truelove_custom_options',
         'type'     => 'checkbox',
     ));
@@ -102,5 +126,51 @@ function truelove_customize_register($wp_customize){
 }
   
 add_action('customize_register', 'truelove_customize_register');
+
+
+function truelove_get_og_data() {
+    if(is_single()) {
+        $html = '<meta property="og:title" content="'.get_the_title().'" />
+                <meta property="og:url" content="'.get_the_permalink().'" />
+                <meta property="og:image" content="'.get_the_post_thumbnail_url().'" />
+            ';
+       
+        return $html;
+    }
+}
+
+function truelove_get_disclaimer() {
+
+    $disclaimer_enabled = get_theme_mod('truelove_custom_options');
+
+    if(isset($disclaimer_enabled["disclaimer_enabled"])) {
+        if($disclaimer_enabled["disclaimer_enabled"] == 1) {
+           echo '
+           <div class="footer-disclaimer-wrapper">'
+           .'<p>'.
+                __('truelove_95 Theme developed by', 'truelove')
+                .' <a href="https://wolkemann.net" target="_blank">Federico Sardo</a>'
+            .'</p>'.
+            '</div>';
+        }
+    }
+}
+
+function truelove_get_shareicons() {
+    $shareicons_enabled = get_theme_mod('truelove_custom_options');
+
+
+    if(isset($shareicons_enabled['social_share'])) {
+        if($shareicons_enabled['social_share'] == 1) {
+
+          echo '<div class="singlepost-shareicons-container">';
+
+          echo '<a href="https://telegram.me/share/url?url='.get_permalink().'"><span class="iconify" data-icon="akar-icons:telegram-fill"></span></a>';
+
+          echo '</div>';
+
+        }
+    }
+}
 
 ?>

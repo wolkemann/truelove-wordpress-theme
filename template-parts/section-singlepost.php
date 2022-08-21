@@ -12,9 +12,10 @@
      ?>
    
     <h1><?php the_title(); ?></h1>
+    <?php truelove_get_shareicons(); ?>
     <?php if(has_post_thumbnail()): ?>
     <img class="singlepost-featured-image"
-    src="<?php echo the_post_thumbnail_url('thumbnail'); ?>" alt="featured image">
+    src="<?php echo the_post_thumbnail_url(); ?>" alt="featured image">
     <?php endif; ?>
 
     <div class="singlepost-content">
