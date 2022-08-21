@@ -75,31 +75,28 @@ WORDPRESS INJECTED CLASS CSS
 }
 
 /* Widget category list CSS */
-.wp-block-categories-list {
-  list-style-type: none;
-}
-
-.wp-block-latest-posts {
-  text-decoration: none;
-}
-
 .wp-block-latest-posts__list,
 .wp-block-categories-list,
+.wp-block-archives-list,
 .wp-block-rss {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   gap: 0.5rem;
 }
 
 .wp-block-latest-posts__list li,
 .wp-block-categories-list li,
+.wp-block-archives-list li,
 .wp-block-rss li {
+  list-style-type: none;
+  flex-shrink: 1;
   padding: 0.5rem;
   background-color: var(--post-border-color);
 }
 
 .wp-block-latest-posts__list li a,
 .wp-block-categories-list li a,
+.wp-block-archives-list li a,
 .wp-block-rss li a {
   display: block;
   width: 100%;

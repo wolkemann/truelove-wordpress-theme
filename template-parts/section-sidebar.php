@@ -1,6 +1,4 @@
-<div class="sidebar-header">
-    asdas
-</div>
+<div class="sidebar-header"></div>
 
 <section class="sidebar-wrapper">
     <?php if(is_active_sidebar('sidebar-widgets') ): ?>
