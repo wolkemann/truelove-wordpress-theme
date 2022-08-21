@@ -77,90 +77,11 @@ function truelove_register_scripts() {
 add_action('wp_enqueue_scripts', 'truelove_register_scripts');
 
 
-
-class truelove_instagram_widget extends WP_Widget {
-    // The construct part
-    function __construct() {
-        parent::__construct(
-            // Base ID of your widget
-            'truelove_instagram_widget', 
-            
-            // Widget name will appear in UI
-            __('truelove Instagram Widget', 'truelove_widget_domain'), 
-            
-            // Widget description
-            array( 'description' => __( 'Sample widget based on WPBeginner Tutorial', 'truelove_widget_domain'), )
-        );
-    }
-    
-    // Creating widget front-end
-    public function widget( $args, $instance ) {
-        $title = apply_filters( 'widget_title', $instance['title'] );
-        $description = $instance['description'];
-        
-        // before and after widget arguments are defined by themes
-        echo $args['before_widget'];
-        if ( ! empty( $title ) )
-        echo $args['before_title'] . $title . $args['after_title'];
-        
-        // This is where you run the code and display the output
-        echo __( $description, 'truelove_widget_domain' );
-        echo $args['after_widget'];
-    }
-    
-    // Widget Backend
-    public function form( $instance ) {
-        if ( isset( $instance[ 'title' ] ) ) {
-            $title = $instance[ 'title' ];
-        }
-        else {
-            $title = __( 'New title', 'truelove_widget_domain' );
-        }
-
-        if ( isset( $instance[ 'description' ] ) ) {
-            $description = $instance[ 'description' ];
-        }
-        else {
-            $description = __( 'Description ciao ciao', 'truelove_widget_domain' );
-        }
-    // Widget admin form
-        ?>
-        <p>
-        <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
-        <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" 
-        name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
-        </p>
-
-        <textarea id="<?php echo $this->get_field_id( 'description' ); ?>" 
-        name="<?php echo $this->get_field_name( 'description' ); ?>" 
-        value="<?php echo esc_attr( $description ); ?>"></textarea>
-
-        <?php
-    }
-    
-    // Updating widget replacing old instances with new
-    public function update( $new_instance, $old_instance ) {
-        $instance = array();
-        $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-        $instance['description'] = ( ! empty( $new_instance['description'] ) ) ? strip_tags( $new_instance['description'] ) : '';
-        return $instance;
-    }
-    
-    // Class wpb_widget ends here
-}
-
-function truelove_register_widget() {
-    register_widget('truelove_instagram_widget');
-}
-
-add_action( 'widgets_init', 'truelove_register_widget' );
-
-
 function truelove_customize_register($wp_customize){
      
-    $wp_customize->add_section('truelove_author_disclaimer', array(
-        'title'    => __('Theme\'s Creator Disclaimer', 'truelove'),
-        'description' => 'Enable this option to show in your footer who created this Theme. Maybe it will help him in some way!',
+    $wp_customize->add_section('truelove_custom_options', array(
+        'title'    => __('Truelove_95 Custom Options', 'truelove'),
+        'description' => __('Custom properties for Truelove_95', 'truelove'),
         'priority' => 120,
     ));
 
@@ -172,8 +93,9 @@ function truelove_customize_register($wp_customize){
   
     $wp_customize->add_control('truelove_custom_options_control', array(
         'settings' => 'truelove_custom_options[disclaimer_enabled]',
-        'label'    => 'Disclaimer enabled',
-        'section'  => 'truelove_author_disclaimer',
+        'label'    => __('Disclaimer enabled', 'truelove'),
+        'description'    => 'davai',
+        'section'  => 'truelove_custom_options',
         'type'     => 'checkbox',
     ));
   
